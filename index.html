@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe — Task 03</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- ============ SCREEN 1: MODE SELECT ============ -->
+    <section class="screen" id="menuScreen">
+      <div class="eyebrow">Task 03</div>
+      <h1>Tic Tac Toe</h1>
+      <p class="subtitle">Choose how you want to play.</p>
+      <div class="stack">
+        <button class="btn-primary" id="vsFriendBtn">Play vs Friend</button>
+        <button class="btn-ghost" id="vsComputerBtn">Play vs Computer</button>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN 2: DIFFICULTY SELECT ============ -->
+    <section class="screen hidden" id="difficultyScreen">
+      <div class="eyebrow">vs Computer</div>
+      <h1>Choose Difficulty</h1>
+      <p class="subtitle">Hard mode uses the minimax algorithm — it never loses.</p>
+      <div class="stack">
+        <button class="btn-diff" data-diff="easy">
+          <span>Easy</span>
+          <small>Computer moves randomly</small>
+        </button>
+        <button class="btn-diff" data-diff="medium">
+          <span>Medium</span>
+          <small>Blocks you, but makes mistakes</small>
+        </button>
+        <button class="btn-diff" data-diff="hard">
+          <span>Hard</span>
+          <small>Unbeatable — best you can do is draw</small>
+        </button>
+      </div>
+      <button class="btn-link" id="backFromDifficulty">← Back</button>
+    </section>
+
+    <!-- ============ SCREEN 3: GAME BOARD ============ -->
+    <section class="screen hidden" id="gameScreen">
+      <div class="game-header">
+        <button class="btn-link" id="backToMenu">← Menu</button>
+        <div class="turn-indicator" id="turnIndicator">Turn: X</div>
+        <button class="btn-link" id="restartBtn">Restart</button>
+      </div>
+
+      <div class="board" id="board">
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score-item">
+          <div class="score-label">X</div>
+          <div class="score-value" id="scoreX">0</div>
+        </div>
+        <div class="score-item">
+          <div class="score-label">Draws</div>
+          <div class="score-value" id="scoreDraw">0</div>
+        </div>
+        <div class="score-item">
+          <div class="score-label" id="scoreOLabel">O</div>
+          <div class="score-value" id="scoreO">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULT OVERLAY ============ -->
+    <div class="overlay hidden" id="resultOverlay">
+      <div class="result-card">
+        <h2 id="resultText">X wins!</h2>
+        <div class="stack">
+          <button class="btn-primary" id="playAgainBtn">Play Again</button>
+          <button class="btn-ghost" id="overlayMenuBtn">Back to Menu</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
