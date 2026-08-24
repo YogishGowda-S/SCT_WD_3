@@ -3,7 +3,7 @@
 An advanced Tic Tac Toe game built for **Task 03** of the SkillCraft Technology Web Development Internship.
 
 ## 🔗 Live Demo
-[Add your GitHub Pages link here after deploying]
+https://yogishgowda-s.github.io/SCT_WD_3/
 
 ## 📋 Task Requirements
 - Build a Tic Tac Toe web application playable against another player or against the computer
